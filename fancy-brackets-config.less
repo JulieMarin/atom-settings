@@ -1,0 +1,35 @@
+@-webkit-keyframes bracketanimation {
+  from  {
+      border-width: 1px;
+      border-color: rgba(0, 255, 48, 0.3);
+      left: 0;
+      top: -1px;
+  }
+  50%   {
+      border-width: 4px;
+      border-color: rgba(0, 255, 48, 0.3);
+      left: 0;
+      top: -2px;
+  }
+  to    {
+      border-width: 1px;
+      border-color: rgba(68, 255, 52, 0.2);
+      left: 0px;
+      top: 0px;
+  }
+}
+atom-text-editor.editor .editor-contents--private .bracket-matcher .region {
+    border-bottom: 0;
+}
+atom-text-editor.editor .editor-contents--private .bracket-matcher .region:after {
+    content: "";
+    -webkit-animation-name: bracketanimation;
+    -webkit-animation-duration: .3s;
+    border: 0.7px solid rgba(134, 255, 98, 0.25);
+    border-style: solid;
+    border-radius: 2px;
+    background-color: rgba(87, 255, 66, 0.07);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
